@@ -32,7 +32,7 @@ jobs:
 
       - name: Run Postman Collection
         run: |
-          newman run ./New_Task.postman_collection.json -r htmlextra,cli \
+          newman run ./New_Task.postman_collection.json -r htmlextra,cli --delay-request 60000 \
             --reporter-htmlextra-export ./reports/report.html --verbose
         shell: bash
 
